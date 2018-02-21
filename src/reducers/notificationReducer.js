@@ -3,7 +3,7 @@ const initialState = null
 const notificationReducer = (state = initialState, action) => {
   switch (action.type) {
   case 'NEW_ANECDOTE':
-    return `you created a new anecdote: '${action.content}'`
+    return `you created a new anecdote: '${action.content.content}'`
   case 'VOTE_ANECDOTE':
     return `you voted '${action.content}'`
   case 'HIDE_NOTIFICATION':

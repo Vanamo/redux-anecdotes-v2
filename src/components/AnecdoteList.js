@@ -38,6 +38,7 @@ class AnecdoteList extends React.Component {
 }
 
 const filteredAnecdotes = (anecdotes, filter) => {
+  {console.log(anecdotes)}
   return (
     anecdotes.filter(a => a.content.toLowerCase()
       .includes(filter.toLowerCase()))
