@@ -26,4 +26,10 @@ export const notificationVote = (content) => {
   }
 }
 
+export const hideNotification = () => {
+  return {
+    type: 'HIDE_NOTIFICATION'
+  }
+}
+
 export default notificationReducer
