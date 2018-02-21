@@ -1,20 +1,29 @@
-const initialState = {
-  content: 'message'
-}
+const initialState = null
 
 const notificationReducer = (state = initialState, action) => {
   console.log('ACTION: ', action)
   switch (action.type) {
-  case 'SET_NOTIFICATION':
-    return action.notification
+  case 'NEW_ANECDOTE':
+    return `you created a new anecdote: '${action.content}'`
+  case 'VOTE_ANECDOTE':
+    return `you voted '${action.content}'`
+  case 'HIDE_NOTIFICATION':
+    return null
   }
   return state
 }
 
-export const notificationChange = (notification) => {
+export const notificationCreation = (content) => {
   return {
-    type: 'SET_NOTIFICATION',
-    notification
+    type: 'NEW_ANECDOTE',
+    content
+  }
+}
+
+export const notificationVote = (content) => {
+  return {
+    type: 'VOTE_ANECDOTE',
+    content
   }
 }
 
