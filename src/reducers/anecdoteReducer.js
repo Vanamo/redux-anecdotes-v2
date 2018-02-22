@@ -1,5 +1,3 @@
-const getId = () => (100000*Math.random()).toFixed(0)
-
 const reducer = (store = [], action) => {
   if (action.type==='VOTE') {
     const old = store.filter(a => a.id !==action.id)
